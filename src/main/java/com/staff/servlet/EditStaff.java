@@ -48,15 +48,16 @@ public class EditStaff extends HttpServlet {
 
 			if (f) {
 				session.setAttribute("sucMsg", "Staff updated successfully.");
-				if (roleId == 1) {
+				System.out.println("staffRoleId is:" +staffRoleId);
+				if (staffRoleId == 1) {
 					resp.sendRedirect("staff/superAdmin/staff.jsp");
-				} else if (roleId == 2) {
+				} else if (staffRoleId == 2) {
 					resp.sendRedirect("staff/engineer/index.jsp");
-				} else if (roleId == 3) {
+				} else if (staffRoleId == 3) {
 					resp.sendRedirect("staff/engineerManager/index.jsp");
-				} else if (roleId == 4) {
+				} else if (staffRoleId == 4) {
 					resp.sendRedirect("staff/operator/index.jsp");
-				} else if (roleId == 5) {
+				} else if (staffRoleId == 5) {
 					resp.sendRedirect("staff/operationsManager/index.jsp");
 				} else {
 					resp.sendRedirect("staff/index.jsp");

@@ -71,7 +71,7 @@
 
 						<div class="mb-3">
 							<label for="problem_type">Problem Type</label> <select
-								name="problem_id" name=problem_type class="form-select">
+								name="problem_id" required name=problem_type class="form-select">
 								<option>--select--</option>
 								<%
 								ProblemDao dao1 = new ProblemDao(DbConnect.getCon());

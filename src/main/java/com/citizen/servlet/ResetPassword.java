@@ -43,10 +43,10 @@ public class ResetPassword extends HttpServlet {
 				citizen = dao.getCitizenByEmail(citizenEmail);
 			}
 
-			if (citizen == null) {
-				session.setAttribute("errorMsg", "Invalid current password.");
-				resp.sendRedirect("citizen/resetPassword.jsp");
-			} else {
+//			if (citizen == null) {
+//				session.setAttribute("errorMsg", "Invalid current password.");
+//				resp.sendRedirect("citizen/resetPassword.jsp");
+//			} else {
 				boolean f = dao.resetPassword(newPassword, citizenId);
 				if (f) {
 					session.setAttribute("sucMsg", "Password reset successfully.");
@@ -56,7 +56,7 @@ public class ResetPassword extends HttpServlet {
 					session.setAttribute("errorMsg", "Something went wrong on server.");
 					resp.sendRedirect("citizen/resetPassword.jsp");
 				}
-			}
+//			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

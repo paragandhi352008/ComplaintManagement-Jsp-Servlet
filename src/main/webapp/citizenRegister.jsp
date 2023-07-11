@@ -85,7 +85,7 @@
 								<label class="form-label">Email address</label> <input
 									name="citizen_email" type="email" class="form-control"
 									id="email" required aria-describedby="emailHelp"
-									placeholder="Enter email" />
+									placeholder="Enter email - Use this as your user name while login" />
 							</div>
 
 
@@ -93,7 +93,7 @@
 								<label class="form-label">Select Gender</label> <br> <input
 									type="radio" id="gender" name="citizen_gender" value="male"
 									required>Male <input type="radio" id="gender"
-									name="citizen_gender" value="famale" />Female
+									name="citizen_gender" value="female" />Female
 
 							</div>
 

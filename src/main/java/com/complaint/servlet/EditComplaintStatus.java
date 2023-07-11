@@ -25,20 +25,25 @@ public class EditComplaintStatus extends HttpServlet {
 			int staffLoginId = Integer.parseInt(req.getParameter("staff_id"));
 
 			StaffDao sdao = new StaffDao(DbConnect.getCon());
-			int roleId = sdao.getStaffRoleByStaffId(staffLoginId);
+			Integer roleId = sdao.getStaffRoleByStaffId(staffLoginId);
+			System.out.println("rold id:" + roleId);
 
 			ComplaintDao dao = new ComplaintDao(DbConnect.getCon());
 
 			HttpSession session = req.getSession();
 
 			boolean f = dao.editComplaintStatus(statusId, complaintId);
+			System.out.println("f is:" + f);
 
-			if (f) {
+			if (f && roleId.equals(2)) {
 				session.setAttribute("sucMsg", "Complaint status updated successfully.");
-				if (roleId == 4) {
-					resp.sendRedirect("staff/operator/reopenComplaints.jsp");
-				} else if (roleId == 5)
-					resp.sendRedirect("staff/operationsManager/newComplaints.jsp");
+				resp.sendRedirect("staff/engineer/index.jsp");
+			} else if (f && roleId.equals(4)) {
+				session.setAttribute("sucMsg", "Complaint status updated successfully.");
+				resp.sendRedirect("staff/operator/reopenComplaint.jsp");
+			} else if (f && roleId.equals(5)) {
+				session.setAttribute("sucMsg", "Complaint status updated successfully.");
+				resp.sendRedirect("staff/operationsManager/newComplaints.jsp");
 			} else {
 				session.setAttribute("errorMsg", "Something went wrong on server.");
 				resp.sendRedirect("staff/engineer/pendingComplaints.jsp");

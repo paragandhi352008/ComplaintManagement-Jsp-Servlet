@@ -112,7 +112,7 @@ public class StaffDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
+		System.out.println("Staff is:" + staff);
 		return staff;
 	}
 
@@ -471,11 +471,9 @@ public class StaffDao {
 				String email = set.getString("email");
 				Boolean isActive = set.getBoolean("isActive");
 				int roleId = set.getInt("roleId");
-				int zoneId = set.getInt("zoneId");
-				String zoneName = set.getString("name");
 
 				Staff u = new Staff(userId, firstName, lastName, userName, password, address, pinCode, mobile, email,
-						isActive, roleId, zoneId, zoneName);
+						isActive, roleId);
 
 				list.add(u);
 			}
@@ -638,117 +636,3 @@ public class StaffDao {
 		return f;
 	}
 }
-//    //method to insert user to data base:
-//    public boolean saveUser(User user) {
-//        boolean f = false;
-//        try {
-//            //user -->database
-//
-//            String query = "insert into users(name,email,password,gender,about) values (?,?,?,?,?)";
-//            PreparedStatement pstmt = this.con.prepareStatement(query);
-//            pstmt.setString(1, user.getName());
-//            pstmt.setString(2, user.getEmail());
-//            pstmt.setString(3, user.getPassword());
-//            pstmt.setString(4, user.getGender());
-//            pstmt.setString(5, user.getAbout());
-//
-//            pstmt.executeUpdate();
-//            f = true;
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return f;
-//
-//    }
-//
-//    //get user by useremail and userpassword:
-//    public User getUserByEmailAndPassword(String email, String password) {
-//        User2 user = null;
-//
-//        try {
-//
-//            String query = "select * from users where email =? and password=?";
-//            PreparedStatement pstmt = con.prepareStatement(query);
-//            pstmt.setString(1, email);
-//            pstmt.setString(2, password);
-//
-//            ResultSet set = pstmt.executeQuery();
-//
-//            if (set.next()) {
-//                user = new User2();
-//
-////             data from db
-////                String name = set.getString("name");
-//////             set to user object
-////                user.setName(name);
-////
-////                user.setId(set.getInt("id"));
-////                user.setEmail(set.getString("email"));
-////                user.setPassword(set.getString("password"));
-////                user.setGender(set.getString("gender"));
-////                user.setAbout(set.getString("about"));
-////                user.setDateTime(set.getTimestamp("rdate"));
-////                user.setProfile(set.getString("profile"));
-//
-//            }
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//
-//        return user;
-//    }
-//
-//    public boolean updateUser(User2 user) {
-//
-//        boolean f = false;
-//        try {
-//
-//            String query = "update users set name=? , email=? , password=? , gender=? ,about=? , profile=? where  id =?";
-//            PreparedStatement p = con.prepareStatement(query);
-//            p.setString(1, user.getName());
-//            p.setString(2, user.getEmail());
-//            p.setString(3, user.getPassword());
-//            p.setString(4, user.getGender());
-//            p.setString(5, user.getAbout());
-//            p.setString(6, user.getProfile());
-//            p.setInt(7, user.getId());
-//
-//            p.executeUpdate();
-//            f = true;
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return f;
-//    }
-//
-//    public User2 getUserByUserId(int userId) {
-//        User2 user = null;
-//        try {
-//            String q = "select * from user where id=?";
-//            PreparedStatement ps = this.con.prepareStatement(q);
-//            ps.setInt(1, userId);
-//            ResultSet set = ps.executeQuery();
-//            if (set.next()) {
-//                user = new User2();
-//
-////             data from db
-//                String name = set.getString("name");
-////             set to user object
-//                user.setName(name);
-//
-//                user.setId(set.getInt("id"));
-//                user.setEmail(set.getString("email"));
-//                user.setPassword(set.getString("password"));
-//                user.setGender(set.getString("gender"));
-//                user.setAbout(set.getString("about"));
-//                user.setDateTime(set.getTimestamp("rdate"));
-//                user.setProfile(set.getString("profile"));
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//
-//        return user;
-//    }

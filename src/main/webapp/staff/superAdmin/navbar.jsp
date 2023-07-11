@@ -19,7 +19,7 @@
 
 
 
-						<li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+						<li class="nav-item"><a class="nav-link active" href="index.jsp">Home</a></li>
 						<li class="nav-item"><a class="nav-link active"
 							href="staff.jsp">Staff</a></li>
 						<li class="nav-item dropdown"><a
@@ -39,12 +39,12 @@
 							id="navbarDropdown" role="button" data-bs-toggle="dropdown"
 							aria-expanded="false"> Reports </a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="../reports/allComplaintsStatus.jsp">Complaint Status</a> <a
-									class="dropdown-item" href="../reports/zoneWiseComplaints.jsp">Zone wise Complaints</a> <a
-									class="dropdown-item" href="../reports/followUpComplaints.jsp">Follow-up Complaints</a> <a
-									class="dropdown-item" href="../reports/onlineRegisteredComplaints.jsp">Online registered Complaints</a>
-									<a class="dropdown-item" href="../reports/operatorRegisteredComplaints.jsp">Operators registered Complaints</a> 
-									<a class="dropdown-item" href="../reports/engineerWiseComplaints.jsp">Complaints worked by Engineers</a>
+								<a class="dropdown-item" href="allComplaintsStatus.jsp">Complaint Status</a> <a
+									class="dropdown-item" href="zoneWiseComplaints.jsp">Zone wise Complaints</a> <a
+									class="dropdown-item" href="followUpComplaints.jsp">Follow-up Complaints</a> <a
+									class="dropdown-item" href="onlineRegisteredComplaints.jsp">Online registered Complaints</a>
+									<a class="dropdown-item" href="operatorRegisteredComplaints.jsp">Operators registered Complaints</a> 
+									<a class="dropdown-item" href="engineerWiseComplaints.jsp">Complaints worked by Engineers</a>
 							</div></li>
 					</ul>
 
@@ -58,8 +58,8 @@
 						${staffObj.lastName}
 					</button>
 					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-					<li><a class="dropdown-item" href="../myProfile.jsp">My Profile</a></li>
-						<li><a class="dropdown-item" href="../resetPassword.jsp">Change
+					<li><a class="dropdown-item" href="myProfile.jsp">My Profile</a></li>
+						<li><a class="dropdown-item" href="resetPassword.jsp">Change
 								Password</a></li>
 						<li><a class="dropdown-item" href="../../staffLogout">Logout</a></li>
 					</ul>

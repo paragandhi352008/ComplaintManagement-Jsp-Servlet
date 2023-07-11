@@ -39,7 +39,22 @@
 </style>
 </head>
 <body>
-	<%@ include file="../engineerManager/navbar.jsp"%>
+	<%
+	Staff staffRole = (Staff) session.getAttribute("staffObj");
+	int roleId = staffRole.getRoleId();
+	out.print("Role id:" +roleId);
+	%>
+	<%
+	if (roleId == 1) {
+	%>
+	<%@ include file="../superAdmin/navbar.jsp"%>
+	<%
+	} else if (roleId == 5) {
+	%>
+	<%@ include file="../operationsManager/navbar.jsp"%>
+	<%
+	}
+	%>
 
 	<div class="container p-5">
 		<div class="row">

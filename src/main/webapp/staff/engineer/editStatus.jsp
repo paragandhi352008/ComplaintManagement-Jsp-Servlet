@@ -170,7 +170,7 @@
 
 							<div class="col-md-6 mt-3">
 								<label class="form-label" for="problem_type">Status </label> <select
-									name="status_id" name=problem_type class="form-select">
+									name="status_id" required name=problem_type class="form-select">
 
 									<option>--select--</option>
 									<%

@@ -41,6 +41,9 @@
 						<span class="fa fa-3x fa-user-circle"></span> <br>Register
 						Complaint
 					</p>
+					<c:if test="${empty staffObj}">
+						<c:redirect url="../staffLogin.jsp"></c:redirect>
+					</c:if>
 					<c:if test="${not empty sucMsg}">
 						<p class="text-center text-success fs-4">${sucMsg}</p>
 						<c:remove var="sucMsg" scope="session" />

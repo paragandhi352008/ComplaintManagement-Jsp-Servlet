@@ -33,11 +33,12 @@
 							<p class="text-center text-success fs-4">${sucMsg}</p>
 							<c:remove var="sucMsg" scope="session" />
 						</c:if>
-
+						
 						<c:if test="${not empty errorMsg}">
-							<p class="text-center text-danger fs-4">${errorMsg}</p>
+							<p class="text-center text-danger fs-4"><c:out value="${errorMsg}"/></p>
 							<c:remove var="errorMsg" scope="session" />
 						</c:if>
+
 						<form action="staffLogin" method="post"
 							onsubmit="return validate()">
 
@@ -57,7 +58,7 @@
 
 							<div class="form-group">
 								<label for="staff_role">Role</label> <select id="inputState"
-									name=staff_role class="form-select">
+									name=staff_role required class="form-select">
 									<option selected disabled value="">--select--</option>
 									<%
 									RoleDao dao = new RoleDao(DbConnect.getCon());

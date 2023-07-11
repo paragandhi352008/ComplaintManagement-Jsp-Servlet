@@ -181,7 +181,7 @@ Citizen c = dao.getCitizenById(userId);
 			alert("Username length must be less than 15")
 			return false;
 		}
-		if (address.length >= 25) {
+		if (address.length >= 35) {
 			alert("Address length must be less than 25")
 			return false;
 		}

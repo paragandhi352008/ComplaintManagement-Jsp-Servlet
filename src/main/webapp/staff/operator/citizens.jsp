@@ -38,7 +38,7 @@
 		</c:if>
 		<br>
 		<div>
-			<a href="../../citizenRegister.jsp" class="btn btn-success">Add Citizen</a> <br>
+			<a href="citizenRegister.jsp" class="btn btn-success">Add Citizen</a> <br>
 			<br>
 		</div>
 		<div class="col-md-12">

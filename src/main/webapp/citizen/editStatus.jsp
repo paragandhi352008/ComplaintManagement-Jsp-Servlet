@@ -86,7 +86,6 @@
 							<input type="hidden" name="complaint_id"
 								value="<%=complaint.getComplaintId()%>">
 
-
 							<div class="col-md-6">
 								<label class="form-label">Complaint Number</label> <input
 									type="text" class="form-control" disabled
@@ -110,12 +109,24 @@
 							</div>
 
 							<div class="col-md-6 mt-3">
-								<label class="form-label">Select Gender</label> <br> <input
-									type="radio" id="gender" name="citizen_gender" value="male"
+								<label class="form-label">Select Gender</label> <br>
+								<%
+								if (citizen.getGender().equalsIgnoreCase("Male")) {
+								%>
+								<input type="radio" id="gender" name="staff_gender" value="Male"
+									required checked>Male <input type="radio" id="gender"
+									name="staff_gender" value="Female" required>Female
+								<%
+								} else if (citizen.getGender().equalsIgnoreCase("Female")) {
+								%>
+								<input type="radio" id="gender" name="staff_gender" value="Male"
 									required>Male <input type="radio" id="gender"
-									name="citizen_gender" value="famale" />Female
+									name="staff_gender" value="Female" required checked>Female
+								<%
+								}
+								%>
 							</div>
-
+							
 							<div class="col-md-6 mt-3">
 								<label class="form-label">Email</label> <input type="text"
 									class="form-control" disabled value=<%=citizen.getEmail()%>>

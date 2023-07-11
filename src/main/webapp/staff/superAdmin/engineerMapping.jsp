@@ -85,7 +85,7 @@
 							<tr>
 								<th scope="col">First Name</th>
 								<th scope="col">Last Name</th>
-								<th scope="col">Problem</th>
+								<th scope="col">Zone</th>
 								<th scope="col">Action</th>
 							</tr>
 						</thead>

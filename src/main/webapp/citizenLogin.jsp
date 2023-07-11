@@ -33,6 +33,7 @@
 							<p class="text-center text-danger fs-4">${errorMsg}</p>
 							<c:remove var="errorMsg" scope="session" />
 						</c:if>
+									
 						<form action="citizenLogin" method="post"
 							onsubmit="return validate()">
 

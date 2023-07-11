@@ -89,7 +89,8 @@
 								%>
 								<td><%=subProblem.getType()%></td>
 								<td><a
-									href="editStatus.jsp?complaintId=<%=c.getComplaintId()%>"
+									<%-- href="editStatus.jsp?complaintId=<%=c.getComplaintId()%>" --%>
+									href="newComplaintsAssignment.jsp?complaintId=<%=c.getComplaintId()%>"
 									class="btn btn-success btn-sm">Edit</a></td>
 							</tr>
 							<%

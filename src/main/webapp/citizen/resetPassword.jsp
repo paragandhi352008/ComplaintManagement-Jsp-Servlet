@@ -32,7 +32,7 @@
 		<%@ include file="navbar.jsp"%>
 	</c:if>
 	<c:if test="${not empty forgotPasswordObj}">
-		<%@ include file="../component/navbar.jsp"%>
+		<%@ include file="../../component/navbar.jsp"%>
 		<input type="hidden" name="new_password_obj" value="new_password">
 
 	</c:if>
@@ -67,12 +67,12 @@
 
 							<c:if test="${empty forgotPasswordObj}">
 
-								<div class="mb-3">
+	<!-- 							<div class="mb-3">
 									<label class="form-label">Current Password</label> <input
 										name="current_password" type="text" class="form-control"
 										id="staff_user_name" required aria-describedby="emailHelp"
 										placeholder="Enter current password">
-								</div>
+								</div> -->
 							</c:if>
 							<div class="mb-3">
 								<label class="form-label">New Password</label> <input

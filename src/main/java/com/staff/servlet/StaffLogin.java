@@ -34,10 +34,11 @@ public class StaffLogin extends HttpServlet {
 			StaffDao dao = new StaffDao(DbConnect.getCon());
 
 			Staff staff = dao.getStaffByEmailPasswordAndRole(staffEmail, staffPassword, staffRoleId);
-
+			System.out.println("From staff login is:" +staff);
 			if (staff == null) {
 				session.setAttribute("errorMsg", "Invalid username or password.");
 				resp.sendRedirect("staffLogin.jsp");
+				System.out.println("I am in if loop");
 
 			} else {
 				session.setAttribute("staffObj", staff);

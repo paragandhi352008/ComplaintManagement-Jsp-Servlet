@@ -34,9 +34,9 @@
 					${staffObj.lastName}
 				</button>
 				<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-					<li><a class="dropdown-item" href="../myProfile.jsp">My
+					<li><a class="dropdown-item" href="myProfile.jsp">My
 							Profile</a></li>
-					<li><a class="dropdown-item" href="../resetPassword.jsp">Change
+					<li><a class="dropdown-item" href="resetPassword.jsp">Change
 							Password</a></li>
 					<li><a class="dropdown-item" href="../../staffLogout">Logout</a></li>
 				</ul>

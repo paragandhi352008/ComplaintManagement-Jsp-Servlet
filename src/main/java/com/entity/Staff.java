@@ -247,4 +247,20 @@ public class Staff {
 		this.zoneId = zoneId;
 		this.zoneName = zoneName;
 	}
+
+	public Staff(int userId, String firstName, String lastName, String userName, String password, String address,
+			int pinCode, String mobile, String email, Boolean isActive, int roleId) {
+		super();
+		this.userId = userId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
+		this.password = password;
+		this.address = address;
+		this.pinCode = pinCode;
+		this.mobile = mobile;
+		this.email = email;
+		this.isActive = isActive;
+		this.roleId = roleId;
+	}
 }

@@ -54,7 +54,6 @@
 								<th scope="col">First Name</th>
 								<th scope="col">Last Name</th>
 								<th scope="col">Mobile</th>
-								<th scope="col">Zone</th>
 								<th scope="col">Action</th>
 							</tr>
 						</thead>
@@ -72,7 +71,6 @@
 								ZoneDao zdao = new ZoneDao(DbConnect.getCon());
 								Zone zone = zdao.getZoneByPinCode(s.getPinCode());
 								%>
-								<td><%=zone.getName()%></td>
 								<td><a
 									href="editStaff.jsp?userId=<%=s.getUserId()%>"
 									class="btn btn-success btn-sm">Edit</a> <a

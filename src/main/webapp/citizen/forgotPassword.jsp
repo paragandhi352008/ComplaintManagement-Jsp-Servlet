@@ -50,7 +50,7 @@
 
 							<div class="form-group">
 								<label for="staff_role">Security Question</label> <select
-									id="inputState" name=citizen_security_question_id
+									id="inputState" required name=citizen_security_question_id
 									class="form-select">
 									<option selected disabled value="">--select--</option>
 									<%
